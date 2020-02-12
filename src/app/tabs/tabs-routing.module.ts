@@ -8,45 +8,65 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'tasks',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+              import('../tasks/tasks.module').then(m => m.TasksPageModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'work',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../work/work.module').then(m => m.WorkPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'notification',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../notification/notification.module').then(m => m.NotificationPageModule)
+          }
+        ]
+      },
+      {
+        path: 'profile',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../profile/profile.module').then(m => m.ProfilePageModule)
+          }
+        ]
+      },
+      {
+        path: 'todo',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../todo/todo.module').then(m => m.TodoPageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/tasks',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/tasks',
     pathMatch: 'full'
   }
 ];
