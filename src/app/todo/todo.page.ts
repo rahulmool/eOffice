@@ -10,7 +10,13 @@ export class TodoPage implements OnInit {
   taskList=[];
   taskName: string ="";
   constructor(public alertCtrl: AlertController) { 
-    this.taskList.push("rahul");
+    this.taskList.push("write 7th practical");
+    this.taskList.push("Install ionic");
+    this.taskList.push("buy manual");
+    this.taskList.push("write cn assigenment");
+    
+    
+    
   }
   async updateTask(index) {
     const alert = await this.alertCtrl.create({

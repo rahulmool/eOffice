@@ -59,14 +59,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tasks',
+        redirectTo: 'tabs/tasks',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tasks',
+    redirectTo: 'tabs/tasks',
     pathMatch: 'full'
   }
 ];
